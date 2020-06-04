@@ -56,6 +56,8 @@ def incomplete(window):
 
 
 app = QtWidgets.QApplication(sys.argv)
+print(QtWidgets.QStyleFactory.keys())
+app.setStyle("Fusion")
 
 window = QtUiTools.QUiLoader().load("mainwindow.ui")
 window.model = TodoModel(todos=[(False,"Eat"),(False,"Pray"),(False,"Love"),(True, "Poop pants")])
